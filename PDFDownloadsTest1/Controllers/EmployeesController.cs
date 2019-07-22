@@ -27,7 +27,7 @@ namespace PDFDownloadsTest1.Controllers
         {
             return View(db.Employees.ToList());
         }
-        public ActionResult ExportPDF()
+        public ActionResult ExportPDF()//Rotativa Implementation
         {
             return new ActionAsPdf("Index");
             
@@ -47,7 +47,7 @@ namespace PDFDownloadsTest1.Controllers
             return View(employee);
         }
 
-        public FileResult createPDF()
+        public FileResult createPDF()//iTextSharp Implementation
         {
             MemoryStream workstream = new MemoryStream();
             StringBuilder status = new StringBuilder("");
